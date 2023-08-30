@@ -1,0 +1,84 @@
+Table 1: Flowers
+
+Columns:
+FlowerID (Primary Key)
+CommonName
+ScientificName
+Family
+Color
+BloomSeason
+
+
+Table 2: Locations
+
+Columns:
+LocationID (Primary Key)
+LocationName
+City
+Country
+Climate
+Altitude
+
+
+Table 3: CareGuides
+
+Columns:
+GuideID (Primary Key)
+FlowerID (Foreign Key referencing Flowers)
+LightRequirements
+WateringSchedule
+SoilType
+PruningInfo
+
+
+Table 4: Purchases
+
+Columns:
+PurchaseID (Primary Key)
+FlowerID (Foreign Key referencing Flowers)
+LocationID (Foreign Key referencing Locations)
+PurchaseDate
+Quantity
+TotalCost
+
+
+Breakdown of each table:
+
+Flowers: Contains information about various types of flowers.
+
+FlowerID: Unique identifier for each flower.
+CommonName: Common name of the flower.
+ScientificName: Scientific name of the flower.
+Family: Taxonomic family of the flower.
+Color: Color of the flower.
+BloomSeason: Season(s) in which the flower blooms.
+
+
+Locations: Stores details about locations where flowers might be found or cultivated.
+
+LocationID: Unique identifier for each location.
+LocationName: Name of the location.
+City: City where the location is situated.
+Country: Country where the location is situated.
+Climate: Climate conditions of the location.
+Altitude: Altitude of the location.
+
+
+CareGuides: Provides care instructions for different flowers.
+
+GuideID: Unique identifier for each care guide.
+FlowerID: References the flower to which the care guide applies.
+LightRequirements: Information about the light conditions the flower prefers.
+WateringSchedule: Recommended watering schedule for the flower.
+SoilType: Suitable soil type for the flower.
+PruningInfo: Guidelines for pruning the flower.
+
+
+Purchases: Tracks purchases of flowers.
+
+PurchaseID: Unique identifier for each purchase.
+FlowerID: References the purchased flower.
+LocationID: References the location of purchase.
+PurchaseDate: Date when the purchase was made.
+Quantity: Quantity of flowers purchased.
+TotalCost: Total cost of the purchase.
